@@ -4,6 +4,7 @@ var queue = (function() {
         function next() {
           var fn = pending.shift();
           if (fn) {
+            console.log(fn,'FN');
             fn(next);
           }
         }
