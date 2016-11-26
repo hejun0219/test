@@ -22,3 +22,8 @@ var queue = (function() {
     console.log(pending);
     console.log(456);
   });
+ console.log(pending);
+  queue(function(){
+    console.log(123);
+  });
+  console.log(pending);
