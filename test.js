@@ -13,3 +13,11 @@ var queue = (function() {
           if (pending.length == 1) next();
         };
 })();
+
+ queue(function(){
+    queue(function(){
+      console.log(456);
+    });
+    console.log(pending);
+    console.log(456);
+  });
